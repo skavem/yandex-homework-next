@@ -1,0 +1,29 @@
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1.44rem;
+  align-items: flex-start;
+}
+
+.filters-card {
+  display: flex;
+  height: calc(100vh - var(--footer-size) - var(--header-size) * 2 - 0.75rem);
+  padding: 1.5rem;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 1.25rem;
+  align-items: flex-start;
+  width: 25.5rem;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.filters-card__title {
+  color: var(--text-primary, #1b1f23);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}

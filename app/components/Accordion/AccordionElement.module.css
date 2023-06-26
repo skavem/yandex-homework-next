@@ -1,0 +1,42 @@
+.accordion {
+  width: 100%;
+}
+
+.accordion__summary:hover,
+.accordion__summary:active {
+  cursor: pointer;
+}
+
+.accordion__summary {
+  list-style: none;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+details[open] .accordion__summary {
+  margin-bottom: 1rem;
+}
+
+.accordion__question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: var(--text-primary, #1b1f23);
+}
+
+.accordion__icon {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+  user-select: none
+}
+details[open] .accordion__icon {
+  transform: rotate(0deg);
+}
+
+.accordion__text {
+  color: var(--text-primary, #1b1f23);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

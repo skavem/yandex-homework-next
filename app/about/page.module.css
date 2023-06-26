@@ -1,0 +1,11 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-paragraph {
+  color: var(--text-primary, #1b1f23);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

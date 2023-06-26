@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  height: 5.375rem;
+  padding: 1.5rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--gray-1, #333);
+}
+
+.footer__qna {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.footer__about {
+  color: #fff;
+  font-size: 1.25rem;
+}

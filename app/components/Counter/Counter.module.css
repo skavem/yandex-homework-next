@@ -1,0 +1,22 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.counter__button {
+  padding: 0.25rem;
+  border-radius: 4px;
+  background: var(--orange, #F50);
+  line-height: 0.75rem;
+}
+
+.counter__button:disabled {
+  background: var(--orange-disabled, #ffa375);
+}
+
+.counter__button__icon {
+  width: 0.75rem;
+}

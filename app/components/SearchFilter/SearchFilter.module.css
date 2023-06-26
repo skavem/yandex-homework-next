@@ -1,0 +1,42 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  color: var(--text-primary, #1b1f23);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input {
+  max-width: 100%;
+  padding: 0.625rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-default, #e1e3e6);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.arrow {
+  transition: transform 0.5s ease-in-out;  
+}
+
+.options {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  background-color: white;
+  width: 22.5rem;
+  padding: 0.5rem;
+  box-shadow: 0px 10px 22px -4px rgba(27, 31, 35, 0.12);
+  z-index: 1;
+}
+.option {
+  padding: 0.75rem;
+}

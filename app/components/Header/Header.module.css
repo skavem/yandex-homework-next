@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  padding: 1.5rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-1, #333);
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.header__title {
+  display: flex;
+  height: 2.25rem;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header__cart {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+.header__cart_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}

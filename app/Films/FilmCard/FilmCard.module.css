@@ -1,0 +1,34 @@
+.film-card {
+  display: flex!important;
+  flex-direction: row!important;
+  gap: 1.5rem!important;
+}
+.film-card--hidden{
+  display: none!important;
+}
+
+.film-card__logo {
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.film-card__info {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.film-card__info__title {
+  color: var(--text-primary, #1b1f23);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.film-card__info__genre {
+  color: var(--text-primary, #1b1f23);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.25rem;
+}
