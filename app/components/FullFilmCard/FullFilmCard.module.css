@@ -8,13 +8,11 @@
   object-fit: contain;
   height: 31.25rem;
   flex: 1 0 25rem;
-  position: relative;
+  position: relative; 
 }
-
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.poster-skeleton {
+  height: 31.25rem;
+  flex: 0 0 25rem;
 }
 
 .info {
@@ -22,6 +20,16 @@
   flex-direction: column;
   flex-shrink: 1;
   gap: 1.5rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title-skeleton {
+  width: 100%;
+  height: 2rem;
 }
 
 .data {

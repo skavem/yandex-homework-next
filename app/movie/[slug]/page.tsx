@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
-import Card from "../../components/Card/Card";
-import Text from "../../components/Text/Text";
-import FullFilmCard from "../../components/FullFilmCard/FullFilmCard";
+import Card from "@/components/Card/Card";
+import Text from "@/components/Text/Text";
+import FullFilmCard from "@/components/FullFilmCard/FullFilmCard";
 import { IMovie } from "@/app/types";
-import Reviews from "../../components/Reviews/Reviews";
+import Reviews from "@/components/Reviews/Reviews";
 import styles from "./page.module.css";
 
 const Page = async ({ params }: { params: { slug: string } }) => {

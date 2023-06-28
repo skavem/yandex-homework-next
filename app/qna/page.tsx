@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../components/Card/Card";
+import Card from "@/components/Card/Card";
 import styles from "./page.module.css";
-import AccordionElement from "../components/Accordion/AccordionElement";
+import AccordionElement from "@/components/Accordion/AccordionElement";
 
 const qna_data = [
   {

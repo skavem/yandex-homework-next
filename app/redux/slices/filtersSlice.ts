@@ -41,8 +41,7 @@ export const filters = createSlice({
       }
       state.theatre = action.payload;
     },
-    setTheatreId(state, action: PayloadAction<string>) {
-      console.log(state.theatreId, action.payload)
+    setTheatreId(state, action: PayloadAction<string | null>) {
       state.theatreId = action.payload;
     },
     setGenreList(state, action: PayloadAction<string[]>) {

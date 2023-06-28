@@ -1,10 +1,11 @@
 "use client";
 
-import { SearchFilterSelect } from "../components/SearchFilter/SearchFilter";
+import { SearchFilterSelect } from "@/components/SearchFilter/SearchFilter";
 import useLoadData from "@/hooks/useLoadData";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { filtersActions } from "../redux/slices/filtersSlice";
-import { ICinema } from "../types";
+import { ICinema } from "@/app/types";
+import skeleton from "@/components/skeleton.module.css";
 
 const TheatreFilter = () => {
   const theatre = useAppSelector((state) => state.filters.theatre);
@@ -20,14 +21,24 @@ const TheatreFilter = () => {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <div className={skeleton.skeleton}>
+          <div
+            style={{ width: "100%", height: "50px", marginTop: "0.5rem" }}
+          ></div>
+        </div>
       ) : !theatres || error ? (
         <div>Error</div>
       ) : (
         <SearchFilterSelect
           options={theatres.map((theatre) => theatre.name)}
           value={theatre || ""}
-          onChange={(e) => dispatch(filtersActions.setTheatre(e.target.value))}
+          onChange={(option) => {
+            dispatch(filtersActions.setTheatre(option));
+            const theatreId = theatres.find(
+              (theatre) => theatre.name === option
+            )?.id;
+            dispatch(filtersActions.setTheatreId(theatreId || null));
+          }}
           onSelect={(option) => {
             dispatch(filtersActions.setTheatre(option));
             const theatreId = theatres.find(

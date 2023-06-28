@@ -1,8 +1,8 @@
 "use client";
 
-import { SearchFilterInput } from "../components/SearchFilter/SearchFilter";
+import { SearchFilterInput } from "@/components/SearchFilter/SearchFilter";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { filtersActions } from "../redux/slices/filtersSlice";
+import { filtersActions } from "@/redux/slices/filtersSlice";
 
 const TitleFilter = () => {
   const title = useAppSelector((state) => state.filters.title);
@@ -11,7 +11,7 @@ const TitleFilter = () => {
   return (
     <SearchFilterInput
       value={title || ""}
-      onChange={(e) => dispatch(filtersActions.setTitle(e.target.value))}
+      onChange={(value: string) => dispatch(filtersActions.setTitle(value))}
       placeholder="Введите название"
       title="Название"
     />

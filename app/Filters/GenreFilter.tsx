@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { SearchFilterSelect } from "../components/SearchFilter/SearchFilter";
+import { SearchFilterSelect } from "@/components/SearchFilter/SearchFilter";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { filtersActions } from "../redux/slices/filtersSlice";
+import { filtersActions } from "@/redux/slices/filtersSlice";
 
 export const GenreFilter = () => {
   const genre = useAppSelector((state) => state.filters.genre);
@@ -13,7 +13,7 @@ export const GenreFilter = () => {
     <SearchFilterSelect
       options={genreList}
       value={genre || ""}
-      onChange={(e) => dispatch(filtersActions.setGenre(e.target.value))}
+      onChange={(value) => dispatch(filtersActions.setGenre(value))}
       onSelect={(option) => dispatch(filtersActions.setGenre(option))}
       placeholder="Выберите жанр"
       title="Жанр"

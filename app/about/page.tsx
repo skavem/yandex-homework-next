@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import Card from "../components/Card/Card";
-import Text from "../components/Text/Text";
+import Card from "@/components/Card/Card";
+import Text from "@/components/Text/Text";
 
 const page = () => {
   return (

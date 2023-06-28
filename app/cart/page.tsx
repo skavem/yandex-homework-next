@@ -1,6 +1,6 @@
 import React from "react";
-import FilmsWrapper from "../components/Films/Films";
-import Summary from "../components/Summary/Summary";
+import FilmsWrapper from "@/components/Films/Films";
+import Summary from "@/components/Summary/Summary";
 
 const page = () => {
   return (
