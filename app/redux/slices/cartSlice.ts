@@ -25,6 +25,10 @@ export const cart = createSlice({
         state.tickets[id] = count - 1;
       }
     },
+    removeMovie: (state, action: PayloadAction<IMovie["id"]>) => {
+      const id = action.payload;
+      delete state.tickets[id];
+    },
   },
 });
 

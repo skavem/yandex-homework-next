@@ -1,7 +1,7 @@
 "use client";
 
 import { SearchFilterSelect } from "../components/SearchFilter/SearchFilter";
-import useLoadData from "../hooks/useLoadData";
+import useLoadData from "@/hooks/useLoadData";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { filtersActions } from "../redux/slices/filtersSlice";
 import { ICinema } from "../types";

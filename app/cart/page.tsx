@@ -1,8 +1,14 @@
 import React from "react";
-import FilmsWrapper from "./Films";
+import FilmsWrapper from "../components/Films/Films";
+import Summary from "../components/Summary/Summary";
 
 const page = () => {
-  return <FilmsWrapper />;
+  return (
+    <>
+      <FilmsWrapper />
+      <Summary />
+    </>
+  );
 };
 
 export default page;

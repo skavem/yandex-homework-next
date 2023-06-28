@@ -1,9 +1,9 @@
 "use client";
-import { useAppSelector } from "@/app/redux/hooks";
+import { useAppSelector } from "@/redux/hooks";
 import React from "react";
 import Text from "../Text/Text";
 import styles from "./CartChip.module.css";
-import { Providers } from "@/app/redux/Provider";
+import { Providers } from "@/redux/Provider";
 
 const CartChip = () => {
   const tickets = useAppSelector((state) => state.cart.tickets);

@@ -8,10 +8,10 @@ import CartChipWrapper from "./CartChip";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Link href={"./"}>
+      <Link href={"/"}>
         <p className={styles.header__title}>Билетопоиск</p>
       </Link>
-      <Link href={"./cart"}>
+      <Link href={"/cart"}>
         <div className={styles.header__cart_wrapper}>
           <CartChipWrapper />
           <Image src={cart} alt="корзина" className={styles.header__cart} />

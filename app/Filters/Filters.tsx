@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
-import { Providers } from "./redux/Provider";
+import { Providers } from "../redux/Provider";
 import styles from "./Filters.module.css";
-import TitleFilter from "./Filters/TitleFilter";
-import GenreFilter from "./Filters/GenreFilter";
-import TheatreFilterWrapper from "./Filters/TheatreFilter";
+import TitleFilter from "./TitleFilter";
+import GenreFilter from "./GenreFilter";
+import TheatreFilter from "./TheatreFilter";
 
 export const Filters = () => {
   return (
@@ -11,7 +11,7 @@ export const Filters = () => {
       <div className={styles.container}>
         <TitleFilter />
         <GenreFilter />
-        <TheatreFilterWrapper />
+        <TheatreFilter />
       </div>
     </Providers>
   );

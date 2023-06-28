@@ -15,3 +15,10 @@ export interface ICinema {
   name: string;
   movieIds: string[];
 }
+
+export interface IReview {
+  id:     string;
+  name:   string;
+  text:   string;
+  rating: number;
+}

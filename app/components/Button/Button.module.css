@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.sm {
+  padding: 0.25rem;
+}
+.md {
+  padding: 0.5rem;
+}
+.lg {
+  padding: 0.5rem 1rem;
+}
+
+.primary {
+  background: var(--orange, #f50);
+  color: var(--button-primary-text-icon, #fff);
+}
+.secondary {
+  border: 1px solid var(--orange, #f50);
+}

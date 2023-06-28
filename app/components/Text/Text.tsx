@@ -19,14 +19,18 @@ const Text = ({
   element,
   className,
   style,
+  fontWeight,
+  fontSize,
 }: React.PropsWithChildren<{
   element?: keyof typeof defaultVariantMapping;
   className?: string;
   style?: React.CSSProperties;
+  fontWeight?: number | string;
+  fontSize?: number | string;
 }>) => {
   return React.createElement(
     defaultVariantMapping[element || "body1"],
-    { className, style },
+    { className, style: { fontWeight, fontSize, ...(style || {}) } },
     children
   );
 };

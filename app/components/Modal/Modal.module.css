@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;  
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  min-width: 18.5rem;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: var(--white, #FFF);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

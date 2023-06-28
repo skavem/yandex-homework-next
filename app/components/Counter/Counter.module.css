@@ -6,17 +6,18 @@
   font-weight: 600;
 }
 
-.counter__button {
+.button {
   padding: 0.25rem;
   border-radius: 4px;
   background: var(--orange, #F50);
   line-height: 0.75rem;
+  user-select: none;
 }
 
-.counter__button:disabled {
+.button:disabled {
   background: var(--orange-disabled, #ffa375);
 }
 
-.counter__button__icon {
+.button__icon {
   width: 0.75rem;
 }

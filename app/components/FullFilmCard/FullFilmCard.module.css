@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.poster {
+  object-fit: contain;
+  height: 31.25rem;
+  flex: 1 0 25rem;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  gap: 1.5rem;
+}
+
+.data {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.data-line {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}

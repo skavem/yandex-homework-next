@@ -21,23 +21,19 @@ const Counter = ({
   return (
     <div className={styles.counter}>
       <button
-        className={styles.counter__button}
+        className={styles.button}
         disabled={minValue !== undefined && value <= minValue}
         onClick={onDecrement}
       >
-        <Image
-          src={minusIcon}
-          alt=""
-          className={styles.counter__button__icon}
-        />
+        <Image src={minusIcon} alt="" className={styles.button__icon} />
       </button>
       <Text>{value}</Text>
       <button
-        className={styles.counter__button}
+        className={styles.button}
         onClick={onIncrement}
         disabled={maxValue !== undefined && value >= maxValue}
       >
-        <Image src={plusIcon} alt="" className={styles.counter__button__icon} />
+        <Image src={plusIcon} alt="" className={styles.button__icon} />
       </button>
     </div>
   );

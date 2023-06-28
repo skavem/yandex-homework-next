@@ -3,21 +3,29 @@
 import { IMovie } from "@/app/types";
 import React, { useCallback } from "react";
 import Counter from "../Counter/Counter";
-import { useAppDispatch, useAppSelector } from "@/app/redux/hooks";
-import { cart } from "@/app/redux/slices/cartSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { cart } from "@/redux/slices/cartSlice";
 
-const TicketsCounterComponent = ({ movieId }: { movieId: IMovie["id"] }) => {
-  const tickets = useAppSelector((state) => state.cart.tickets[movieId]);
+const TicketsCounter = ({
+  movieId,
+  onZero,
+}: {
+  movieId: IMovie["id"];
+  onZero?: () => void;
+}) => {
+  const ticketsCnt = useAppSelector((state) => state.cart.tickets[movieId]);
   const dispatch = useAppDispatch();
 
-  const value = tickets || 0;
+  const value = ticketsCnt || 0;
 
   const increment = useCallback(() => {
     dispatch(cart.actions.addTicket(movieId));
   }, [dispatch, movieId]);
+
   const decrement = useCallback(() => {
+    if (value === 1) onZero?.();
     dispatch(cart.actions.removeTicket(movieId));
-  }, [dispatch, movieId]);
+  }, [dispatch, movieId, value, onZero]);
 
   return (
     <Counter
@@ -30,4 +38,4 @@ const TicketsCounterComponent = ({ movieId }: { movieId: IMovie["id"] }) => {
   );
 };
 
-export default TicketsCounterComponent;
+export default TicketsCounter;
