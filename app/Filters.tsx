@@ -1,5 +1,3 @@
-"use client";
-
 import React, { Suspense } from "react";
 import { Providers } from "./redux/Provider";
 import styles from "./Filters.module.css";
@@ -13,9 +11,7 @@ export const Filters = () => {
       <div className={styles.container}>
         <TitleFilter />
         <GenreFilter />
-        <Suspense fallback={<div>Loading...</div>}>
-          <TheatreFilterWrapper />
-        </Suspense>
+        <TheatreFilterWrapper />
       </div>
     </Providers>
   );
